@@ -1,5 +1,5 @@
 import 'styles/globals.scss'
-import "github-markdown-css/github-markdown-light.css"
+import "github-markdown-css/github-markdown.css"
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
