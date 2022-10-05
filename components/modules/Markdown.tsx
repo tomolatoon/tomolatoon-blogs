@@ -1,9 +1,11 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+
+import styles from "styles/Modules/Markdown.module.scss"
+
 import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import remarkBreaks from "remark-breaks";
 import remarkDirective from "remark-directive";
-
 import remarkGfm from "remark-gfm";
 import remarkToc from "remark-toc";
 
@@ -13,7 +15,7 @@ export interface Props {
 
 const Markdown = ({ children }: Props) => {
     return (<ReactMarkdown 
-        className="markdown-body"
+        className={"markdown-body " + styles.markdown}
         remarkPlugins={[
             remarkBreaks,
             remarkGfm,

@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import styles from 'styles/Home.module.scss'
+import styles from 'styles/Pages/Home.module.scss'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div id={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
           {"tomolatoon's blogs"}

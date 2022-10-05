@@ -1,4 +1,4 @@
-import Markdown from 'components/modules/Markdown'
+import Markdown from 'components/Modules/Markdown'
 import type { NextPage } from 'next'
 import Main from 'components/Layouts/Main'
 import Head from 'next/head'

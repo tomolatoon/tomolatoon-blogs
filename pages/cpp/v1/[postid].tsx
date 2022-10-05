@@ -1,5 +1,5 @@
 import { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
-import Markdown from "components/modules/Markdown";
+import Markdown from "components/Modules/Markdown";
 import { getPostByFilename } from "lib/posts";
 import { getRoutingArgument } from "lib/getProps";
 
