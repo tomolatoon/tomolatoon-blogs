@@ -8,8 +8,7 @@ import styles from "styles/Pages/Editor.module.scss"
 const Page: NextPage = () => {
     const [contents, setContents] = useState("");
     return (
-        <Main>
-            <div id={styles.container}>
+        <Main className={styles.container}>
                 <Head>
                     <title>Editor</title>
                 </Head>
@@ -22,7 +21,6 @@ const Page: NextPage = () => {
 リアルタイムに反映されます。
 `}
                 </Markdown>
-            </div>
         </Main>
     )
 }
