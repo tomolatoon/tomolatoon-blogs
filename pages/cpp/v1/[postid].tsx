@@ -1,7 +1,8 @@
 import { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
 import Markdown from "components/Modules/Markdown";
-import { getPostByFilename } from "lib/posts";
+import { getPostByFilename } from "lib/postsFromDirectory";
 import { getRoutingArgument } from "lib/getProps";
+import Main from "components/Layouts/Main";
 
 type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
 
@@ -10,8 +11,8 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
 
     const routingArgument = getRoutingArgument(context, "postid")
 
-    if(typeof routingArgument !== "string") return r;
-    
+    if (typeof routingArgument !== "string") return r;
+
     const contents = getPostByFilename("/posts/basics/", routingArgument);
 
     if (contents) {
@@ -28,9 +29,11 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
 
 const Page: NextPage<Props> = ({ contents }) => {
     return (
-        <Markdown>
-            {contents}
-        </Markdown>
+        <Main>
+            <Markdown>
+                {contents}
+            </Markdown>
+        </Main>
     );
 }
 

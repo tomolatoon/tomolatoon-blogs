@@ -11,7 +11,8 @@ const Page: NextPage = () => {
       </Head>
 
       <Markdown>
-        {`# C++ & Siv3D`}
+        {`# C++ & Siv3D
+更新開始は未定です。Web & Next.jsの方を先に更新します。`}
       </Markdown>
     </Main>
   )
